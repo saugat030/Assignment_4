@@ -1,0 +1,26 @@
+﻿@model Employee
+
+<h2>Add Employee</h2>
+
+<form asp-action="Add" asp-controller="Department" method="post">
+    <div class="form-group">
+        <label asp-for="Id" class="form-label"></label>
+        <input asp-for="Id" type="number" class="form-control" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DepartmentId" class="form-label"></label>
+        <input asp-for="DepartmentId" type = "number" class="form-control" />
+        <span asp-validation-for="DepartmentId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Employee</button>
+</form>
+
